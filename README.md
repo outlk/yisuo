@@ -1,8 +1,11 @@
 # 伊索寓言小程序
 
 功能很简单，向下拖动页面，随机显示一则伊索寓言。
+![](https://raw.githubusercontent.com/plough/yisuo/master/images/yisuo.jpg)
+
 
 微信扫码体验：
+
 ![](https://raw.githubusercontent.com/plough/yisuo/master/images/qrcode.png)
 
 
