@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "伊索寓言",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh": true
+  }
+}

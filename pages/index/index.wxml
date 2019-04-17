@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="body">
+  <view class="tip" hidden='{{hidetip}}'>
+  <text style="font-size: 70rpx">伊索寓言v1.0</text>
+  <text style="font-size: 30rpx">by 桩白墨</text>
+
+  <view style="margin-top: 100rpx; font-size: 90rpx">\n下拉刷新哦～</view>
+  </view>
+
+  <view hidden='{{!hidetip}}'>
+  <view class="title">{{fable.title}}</view>
+  <view class="content">{{fable.content}}</view>
+  <view class="conclusion">{{fable.conclusion}}</view>
+  </view>
+</view>

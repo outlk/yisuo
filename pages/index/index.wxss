@@ -1,0 +1,37 @@
+/**index.wxss**/
+.tip {
+  height:500rpx;
+  margin-top: 150rpx;
+  font-size: 80rpx;
+  text-indent: 0;
+  text-align: center;
+}
+
+.title {
+  font-size: 100rpx;
+  font-weight: 800;
+  margin-bottom: 80rpx;
+  margin-top: 50rpx;
+  text-indent: 0;
+  text-align: center;
+}
+
+page {
+  background-color: black;
+}
+
+ .body {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 20rpx;
+  padding-bottom: 120rpx;
+  color: whitesmoke; 
+  font-size: 60rpx;
+  text-indent: 2em;
+} 
+
+.conclusion {
+  margin-top: 50rpx;
+  color: rgb(218, 50, 8);
+  font-weight: bold;
+}
