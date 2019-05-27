@@ -2,12 +2,12 @@
 
 功能很简单，向下拖动页面，随机显示一则伊索寓言。
 
-![](https://raw.githubusercontent.com/plough/yisuo/master/images/yisuo.jpg)
+![](https://github.com/plough/yisuo/blob/master/images/yisuo.jpg?raw=true)
 
 
 微信扫码体验：
 
-![](https://raw.githubusercontent.com/plough/yisuo/master/images/qrcode.png)
+![](https://github.com/plough/yisuo/blob/master/images/qrcode.png?raw=true)
 
 
 
