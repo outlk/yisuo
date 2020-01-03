@@ -6,7 +6,7 @@ var fableList = fableData.fableList
 shuffle(fableList)
 removeInvalidFables(fableList)
 
-var startX, endX;
+var startX, endX, startY, endY;
 var moveFlag = true;// 判断执行滑动事件
 
 Page({
@@ -50,6 +50,7 @@ Page({
 
   touchStart: function (e) {
     startX = e.touches[0].pageX; // 获取触摸时的原点
+    startY = e.touches[0].pageY;
     moveFlag = true;
   },
 
@@ -57,14 +58,18 @@ Page({
 
   touchMove: function (e) {
     endX = e.touches[0].pageX; // 获取触摸时的原点
+    endY = e.touches[0].pageY;
+    var yGap = Math.abs(endY - startY);
+    var xGap = 20;
+    console.log(yGap);
 
     if (moveFlag) {
-      if (endX - startX > 15) {
+      if (endX - startX > xGap && yGap < xGap) {
         console.log("move right");
         this.move2right();
         moveFlag = false;
       }
-      if (startX - endX > 15) {
+      if (startX - endX > xGap && yGap < xGap) {
         console.log("move left");
         this.move2left();
         moveFlag = false;
