@@ -35,3 +35,15 @@ page {
   color: rgb(218, 50, 8);
   font-weight: bold;
 }
+.container1, .container2 {
+  position: absolute;
+  min-height: 90%;
+  width: 90%;
+  padding-bottom: 120rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 200rpx 0; */
+  box-sizing: border-box;
+}

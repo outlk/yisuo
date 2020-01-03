@@ -7,6 +7,6 @@
     "navigationBarBackgroundColor": "#000",
     "navigationBarTitleText": "伊索寓言",
     "navigationBarTextStyle":"white",
-    "enablePullDownRefresh": true
+    "enablePullDownRefresh": false
   }
 }
