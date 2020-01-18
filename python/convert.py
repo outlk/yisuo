@@ -3,7 +3,6 @@
 
 __author__ = "gzshen"
 
-import jiphy
 import re
 
 
@@ -12,10 +11,10 @@ def proc_js(lstAll):
     all_yuyan = []
     for i, v in list(enumerate(lstAll)):
         if re.findall("{", v):
-            # print(i,v)
             begins.append(i+1)
 
-    print(begins)
+    # print(begins)
+    
     for i in begins:
         if i == 2626:
             print(i)
@@ -28,37 +27,34 @@ def proc_js(lstAll):
                 a = a.encode('utf-8').decode('unicode_escape')
                 b = b.encode('utf-8').decode('unicode_escape')
                 # a, b = (a.lstrip(), b.lstrip().rstrip(","))
-                b=b.strip().rstrip(",")
+                b = b.strip().rstrip(",")
                 a = re.findall(r"^\s*\"(.*)\"$", a)[0]
                 if a != "index":
-                    b = re.findall("^\"?(.*)\"$", b)[0]
-                # print(a,b)
-                if a == "19":
-                    print(b)
+                    b = re.findall(r"^\"?(.*)\"$", b)[0]
+
                 x[a] = b
             all_yuyan.append(x)
-    # print(all_yuyan)
 
-    with open("out.tex","w", encoding="utf-8") as texout:
+    with open("out.tex", "w", encoding="utf-8") as texout:
         for y in all_yuyan:
             # index = y["index"]
-            title = y["title"] # .encode('utf-8').decode('unicode_escape')
-            content = y["content"] # .encode('utf-8').decode('unicode_escape')
+            title = y["title"]  # .encode('utf-8').decode('unicode_escape')
+            content = y["content"]  # .encode('utf-8').decode('unicode_escape')
             conclusion = y["conclusion"]
-            print(y["title"])
-            texout.writelines("\\section{{{}}}\n\n".format(title))
-            texout.writelines("{}\n\n".format(content))
-            texout.writelines("{{\\bfseries \\color{{red}}{}}}\n\n".format(conclusion))
-    pass
+            print(title)
+            if title:
+                texout.writelines("\\section{{{}}}\n\n".format(title))
+                texout.writelines("{}\n\n".format(content))
+                texout.writelines(
+                    "{{\\bfseries \\color{{red}}{}}}\n\n".format(conclusion))
 
-# re.findall("{",all)
 
 def main():
     with open("../data/yisuodata.js") as jsin:
         all = jsin.readlines()
 
     proc_js(all)
-    # jiphy.to.python(all)
+
 
 if __name__ == "__main__":
     main()

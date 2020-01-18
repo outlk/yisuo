@@ -1,0 +1,60 @@
+% !TeX program = xelatex
+
+\documentclass[oneside, 17pt]{memoir}
+
+\usepackage[]{ctex}
+\setmainfont{Times New Roman}
+\setCJKmainfont[AutoFakeSlant=0.3, AutoFakeBold = {1.17}]{KaiTi}
+
+\usepackage{booktabs,tabularx,makecell}
+\usepackage{siunitx}
+\usepackage{graphicx}
+
+\usepackage{color}
+\usepackage{multicol}
+
+%%% Kindle version
+\usepackage[
+paperwidth=6in,
+paperheight=9in,
+margin=2mm,bottom=6mm,nohead
+]{geometry}
+%\setheadfoot{0pt}{2pt}
+\setlength{\footskip}{4mm}
+
+\makeoddfoot{plain}{}{\tiny\thepage}{}
+\makeevenfoot{plain}{}{\tiny\thepage}{}
+\pagestyle{plain}
+\setlength{\abovecaptionskip}{2pt}
+\setlength{\belowcaptionskip}{0pt}
+\setlength{\textfloatsep}{2pt}
+\setlength{\floatsep}{2pt}
+\setlength{\intextsep}{2pt}
+
+\chapterstyle{ger}
+\setcounter{secnumdepth}{0}
+% \setcounter{tocdepth}{0}
+
+\setlength{\cftchapternumwidth}{8em}
+
+\usepackage[setpagesize=false]{hyperref}
+\usepackage{longtable}
+\usepackage{tabu}
+
+\title{《伊索寓言》\\Aesop's Fables}
+\author{沈国状\quad 排版\\OuTlK@QQ.CoM}
+\date{}
+
+\begin{document}
+    \maketitle
+    \newpage
+    \begin{multicols}{2}
+        {
+            \small
+            \tableofcontents
+        }
+    \end{multicols}
+
+    \newpage
+    \input{out.tex}
+\end{document}

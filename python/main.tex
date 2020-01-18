@@ -3,6 +3,7 @@
 \documentclass[a4paper, 12pt]{ctexart}
 
 \usepackage{color}
+\usepackage{multicol}
 
 \title{《伊索寓言》\\Aesop's Fables}
 \author{沈国状\quad 排版\\OuTlK@QQ.CoM}
@@ -10,10 +11,13 @@
 
 \begin{document}
     \maketitle
-    {
-        \small
-        \tableofcontents
-    }
+    \begin{multicols}{2}
+        {
+            \small
+            \tableofcontents
+        }
+    \end{multicols}
+
     \newpage
     \input{out.tex}
 \end{document}
